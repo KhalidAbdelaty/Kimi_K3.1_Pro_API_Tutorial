@@ -1,0 +1,14 @@
+{
+  "ok": false,
+  "error_type": "RuntimeError",
+  "error": "{'env_has_key': False, 'net': 'gaierror', 'visible_files': ['/work/candidate.py'], 'root_write': 'OSError'}",
+  "traceback_tail": [
+    "Traceback (most recent call last):",
+    "  File \"/sandbox/entry.py\", line 62, in main",
+    "    exec(compile(source, \"candidate.py\", \"exec\"), namespace)",
+    "  File \"candidate.py\", line 15, in <module>",
+    "    raise RuntimeError(str(out))",
+    "RuntimeError: {'env_has_key': False, 'net': 'gaierror', 'visible_files': ['/work/candidate.py'], 'root_write': 'OSError'}"
+  ],
+  "seconds": 2.88
+}

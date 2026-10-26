@@ -1,0 +1,32 @@
+{
+ "model": "kimi-k3.1-pro",
+ "reasoning_effort": "high",
+ "max_completion_tokens": 32768,
+ "started": "20261026-214846",
+ "openai_sdk": "3.39.0",
+ "frozen_hashes": "d4fe5e0aeb5f28dc78735c2c01c4a02b292006e074167f0a416d0b312590455a  hidden/eval_rules.json\n7df6e9785c97a7d2260f464b6497f3c87df790988b31c944ef4541e53e9da4f8  hidden/manifest.json\n67573fa41c1e19fcb0924c11bd92a6e18efaaec05e9c7fce462b83462bb21562  inputs/view1_front.png\n19cd2362501cf67a76a5591af008deab9cd8d41596ab1dbb9302f2f7c5c3af62  inputs/view2_top.png\n17346a00a6771c3c5018a5b8c9c6b82e3835083abc74ae136aca9ab10a4100b4  inputs/view3_right.png\nd24b03a6944d3f10881acfef6947fab4bc41ff269fd1c4a3f213246fb622a1f8  inputs/view4_iso.png\n",
+ "phases": {
+  "baseline": {
+   "candidate": "c0",
+   "seconds": 96.7
+  },
+  "repair": {
+   "final": "c0",
+   "stop": "submitted",
+   "repairs": 0,
+   "candidates": [],
+   "summary": "The model matches all four reference views: a 60 \u00d7 40 \u00d7 45 mm L-bracket with 6 mm walls, two 6.5 mm base holes, and a centered 6 \u00d7 20 mm vertical slot. Inspection confirms one valid solid with the intended bounding box and cylindrical features.",
+   "seconds": 29.5
+  },
+  "edit": {
+   "final": "c1",
+   "stop": "submitted",
+   "repairs": 0,
+   "candidates": [
+    "c1"
+   ],
+   "summary": "Changed only slot_width from 6 mm to 9 mm. The slot remains 20 mm end-to-end at the same center, while the mounting holes, 6 mm plate thickness, and 60 \u00d7 40 \u00d7 45 mm outer dimensions are unchanged.",
+   "seconds": 63.4
+  }
+ }
+}

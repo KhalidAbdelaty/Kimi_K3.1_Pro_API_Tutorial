@@ -1,0 +1,10 @@
+# Tested on Python 3.12.3 (Linux x86_64) with Docker 29.9.2
+cadquery==2.8.0
+cadquery-ocp==7.9.3.1.1
+openai==3.39.0
+python-dotenv==1.2.4
+numpy==2.5.4
+pillow==13.0.0
+trimesh==5.2.0
+shapely==2.2.0
+networkx==3.7

@@ -1,0 +1,78 @@
+{
+ "c0": {
+  "id": "c0",
+  "phase": "baseline",
+  "dir": "runs/20261026-214530/candidates/c0",
+  "report": {
+   "ok": true,
+   "valid": true,
+   "solids": 1,
+   "bbox_mm": {
+    "xmin": -30.0,
+    "xmax": 30.0,
+    "ymin": -20.0,
+    "ymax": 20.0,
+    "zmin": 0.0,
+    "zmax": 45.0
+   },
+   "size_mm": {
+    "x": 60.0,
+    "y": 40.0,
+    "z": 45.0
+   },
+   "volume_mm3": 27368.16,
+   "faces": 14,
+   "cylindrical_faces": [
+    {
+     "axis": "Y",
+     "radius_mm": 3.0,
+     "count": 2
+    },
+    {
+     "axis": "Z",
+     "radius_mm": 3.25,
+     "count": 2
+    }
+   ],
+   "seconds": 3.22
+  }
+ },
+ "c1": {
+  "id": "c1",
+  "phase": "edit",
+  "dir": "runs/20261026-214530/candidates/c1",
+  "report": {
+   "ok": true,
+   "valid": true,
+   "solids": 1,
+   "bbox_mm": {
+    "xmin": -30.0,
+    "xmax": 30.0,
+    "ymin": -20.0,
+    "ymax": 20.0,
+    "zmin": 0.0,
+    "zmax": 45.0
+   },
+   "size_mm": {
+    "x": 60.0,
+    "y": 40.0,
+    "z": 45.0
+   },
+   "volume_mm3": 27066.1,
+   "faces": 14,
+   "cylindrical_faces": [
+    {
+     "axis": "Y",
+     "radius_mm": 4.5,
+     "count": 2
+    },
+    {
+     "axis": "Z",
+     "radius_mm": 3.25,
+     "count": 2
+    }
+   ],
+   "seconds": 2.48
+  }
+ }
+}

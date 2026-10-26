@@ -1,0 +1,27 @@
+flowchart LR
+  subgraph Visible["What Kimi can see"]
+    IMG["4 reference views<br/>+ width = 60 mm"]
+    API["Kimi K3.1 Pro API<br/>Chat Completions<br/>reasoning_effort = high"]
+    subgraph Tools["App-defined tools (run locally)"]
+      EX["execute_cad<br/>Docker sandbox, no network"]
+      IN["inspect_cad<br/>validity, bbox, volume"]
+      RE["render_cad<br/>same 4 cameras"]
+      SU["submit_cad"]
+    end
+  end
+  subgraph Hidden["Hidden from Kimi"]
+    GT["Ground-truth CadQuery<br/>+ dimension manifest"]
+    EV["Evaluator<br/>voxel IoU, features,<br/>edit preservation"]
+    LOG["Run log + scores"]
+  end
+  IMG --> API
+  API -->|tool_calls| EX
+  API --> IN
+  API --> RE
+  API --> SU
+  EX -->|tool result| API
+  IN -->|tool result| API
+  RE -->|images| API
+  SU -->|saved STEP files| EV
+  GT --> EV
+  EV --> LOG

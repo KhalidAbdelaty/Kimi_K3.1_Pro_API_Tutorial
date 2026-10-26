@@ -1,0 +1,4 @@
+dump keys: ['content', 'reasoning_content', 'role', 'tool_calls'] | reasoning_content kept: True
+TOOL-IMAGE ACCEPTED -> Red | usage: {'completion_tokens': 21, 'prompt_tokens': 291, 'total_tokens': 312, 'completion_tokens_details': {'reasoning_tokens': 5}, 'prompt_tokens_details': {'cache_write_tokens': 279}}
+NO-REASONING REJECTED -> RateLimitError Error code: 429 - Your account <org-id redacted> request reached organization max RPM: 3, please try again after 1 seconds
+# The third request in this probe hit the account's 3 RPM limit (HTTP 429). drop_reasoning_content.py repeats it with pauses.

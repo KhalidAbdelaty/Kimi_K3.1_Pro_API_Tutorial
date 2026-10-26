@@ -1,0 +1,29 @@
+{
+  "dims": {
+    "width": 60.0,
+    "depth": 40.0,
+    "height": 45.0,
+    "thickness": 6.0,
+    "hole_diameter": 6.5,
+    "hole_spacing": 34.0,
+    "hole_center_y": -3.0,
+    "slot_width": 6.0,
+    "slot_length": 20.0,
+    "slot_center_x": 0.0,
+    "slot_center_z": 25.5
+  },
+  "validation": {
+    "solids": 1,
+    "valid": true,
+    "bbox": [
+      -30.0,
+      30.0,
+      -20.0,
+      20.0,
+      0.0,
+      45.0
+    ],
+    "volume_mm3": 27368.16
+  },
+  "source_sha256": "82ad8138cef0139dd9f614310f449187815cc504509874af763fcf449a728535"
+}

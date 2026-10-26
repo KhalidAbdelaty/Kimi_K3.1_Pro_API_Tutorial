@@ -1,0 +1,1 @@
+{"ok": true, "valid": true, "solids": 1, "bbox_mm": {"xmin": -30.0, "xmax": 30.0, "ymin": -20.0, "ymax": 20.0, "zmin": 0.0, "zmax": 45.0}, "size_mm": {"x": 60.0, "y": 40.0, "z": 45.0}, "volume_mm3": 27427.06, "faces": 14, "cylindrical_faces": [{"axis": "Y", "radius_mm": 3.0, "count": 2}, {"axis": "Z", "radius_mm": 3.0, "count": 2}]}

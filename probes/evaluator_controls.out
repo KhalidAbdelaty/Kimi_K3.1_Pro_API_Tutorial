@@ -1,0 +1,2 @@
+plain L, no features: checks 5/7, absolute IoU 0.9633, normalized IoU 0.9639
+exact part scaled 1.2x: checks 2/13, absolute IoU 0.3819, normalized IoU 1.0

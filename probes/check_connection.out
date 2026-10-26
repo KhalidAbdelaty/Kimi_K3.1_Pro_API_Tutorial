@@ -1,0 +1,5 @@
+A STEP file stores 3D CAD product data—typically precise solid and surface geometry, assembly structure, and related product information—in a standardized, vendor-neutral format for exchange between CAD systems.
+finish_reason: stop
+reasoning_content present: True
+usage: {'completion_tokens': 202, 'prompt_tokens': 97, 'total_tokens': 299, 'completion_tokens_details': {'reasoning_tokens': 149}, 'prompt_tokens_details': {'cache_write_tokens': 0}}
+seconds: 6.3

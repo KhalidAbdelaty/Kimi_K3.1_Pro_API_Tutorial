@@ -1,0 +1,338 @@
+{
+ "scores": {
+  "c0": {
+   "phase": "baseline",
+   "measurements": {
+    "bbox": {
+     "min": [
+      -30.0,
+      -20.0,
+      0.0
+     ],
+     "max": [
+      30.0,
+      20.0,
+      45.0
+     ]
+    },
+    "size_mm": [
+     60.0,
+     40.0,
+     45.0
+    ],
+    "volume_mm3": 27368.22,
+    "holes": [
+     {
+      "diameter": 6.5,
+      "center": [
+       -17.0,
+       -3.0
+      ]
+     },
+     {
+      "diameter": 6.5,
+      "center": [
+       17.0,
+       -3.0
+      ]
+     }
+    ],
+    "slots": [
+     {
+      "width": 6.0,
+      "length": 20.0,
+      "center": [
+       0.0,
+       25.5
+      ]
+     }
+    ],
+    "base_thickness": 6.0,
+    "upright_thickness": 6.0,
+    "hole_center_errors_mm": [
+     0.0,
+     0.0
+    ]
+   },
+   "checks": {
+    "width": true,
+    "depth": true,
+    "height": true,
+    "base_thickness": true,
+    "upright_thickness": true,
+    "hole_count": true,
+    "slot_count": true,
+    "hole_diameters": true,
+    "hole_centers": true,
+    "hole_spacing": true,
+    "slot_width": true,
+    "slot_length": true,
+    "slot_center": true
+   },
+   "checks_passed": "13/13",
+   "iou_absolute": 1.0,
+   "iou_normalized_64": 1.0
+  },
+  "c1": {
+   "phase": "edit",
+   "measurements": {
+    "bbox": {
+     "min": [
+      -30.0,
+      -20.0,
+      0.0
+     ],
+     "max": [
+      30.0,
+      20.0,
+      45.0
+     ]
+    },
+    "size_mm": [
+     60.0,
+     40.0,
+     45.0
+    ],
+    "volume_mm3": 27066.18,
+    "holes": [
+     {
+      "diameter": 6.5,
+      "center": [
+       -17.0,
+       -3.0
+      ]
+     },
+     {
+      "diameter": 6.5,
+      "center": [
+       17.0,
+       -3.0
+      ]
+     }
+    ],
+    "slots": [
+     {
+      "width": 9.0,
+      "length": 20.0,
+      "center": [
+       0.0,
+       25.5
+      ]
+     }
+    ],
+    "base_thickness": 6.0,
+    "upright_thickness": 6.0,
+    "hole_center_errors_mm": [
+     0.0,
+     0.0
+    ]
+   },
+   "checks": {
+    "width": true,
+    "depth": true,
+    "height": true,
+    "base_thickness": true,
+    "upright_thickness": true,
+    "hole_count": true,
+    "slot_count": true,
+    "hole_diameters": true,
+    "hole_centers": true,
+    "hole_spacing": true,
+    "slot_width": false,
+    "slot_length": true,
+    "slot_center": true
+   },
+   "checks_passed": "12/13",
+   "iou_absolute": 0.9888,
+   "iou_normalized_64": 0.9865
+  }
+ },
+ "edit": {
+  "pre": {
+   "bbox": {
+    "min": [
+     -30.0,
+     -20.0,
+     0.0
+    ],
+    "max": [
+     30.0,
+     20.0,
+     45.0
+    ]
+   },
+   "size_mm": [
+    60.0,
+    40.0,
+    45.0
+   ],
+   "volume_mm3": 27368.22,
+   "holes": [
+    {
+     "diameter": 6.5,
+     "center": [
+      -17.0,
+      -3.0
+     ]
+    },
+    {
+     "diameter": 6.5,
+     "center": [
+      17.0,
+      -3.0
+     ]
+    }
+   ],
+   "slots": [
+    {
+     "width": 6.0,
+     "length": 20.0,
+     "center": [
+      0.0,
+      25.5
+     ]
+    }
+   ],
+   "base_thickness": 6.0,
+   "upright_thickness": 6.0
+  },
+  "post": {
+   "bbox": {
+    "min": [
+     -30.0,
+     -20.0,
+     0.0
+    ],
+    "max": [
+     30.0,
+     20.0,
+     45.0
+    ]
+   },
+   "size_mm": [
+    60.0,
+    40.0,
+    45.0
+   ],
+   "volume_mm3": 27066.18,
+   "holes": [
+    {
+     "diameter": 6.5,
+     "center": [
+      -17.0,
+      -3.0
+     ]
+    },
+    {
+     "diameter": 6.5,
+     "center": [
+      17.0,
+      -3.0
+     ]
+    }
+   ],
+   "slots": [
+    {
+     "width": 9.0,
+     "length": 20.0,
+     "center": [
+      0.0,
+      25.5
+     ]
+    }
+   ],
+   "base_thickness": 6.0,
+   "upright_thickness": 6.0
+  },
+  "checks": {
+   "slot_count": true,
+   "slot_width_9mm": true,
+   "slot_center_kept": true,
+   "slot_length_kept": true,
+   "bbox_kept": true,
+   "thickness_kept": true,
+   "holes_kept": true,
+   "nothing_else_changed": true
+  },
+  "outside_change_mm3": 0.0,
+  "checks_passed": "8/8",
+  "iou_vs_edited_reference": 1.0
+ },
+ "usage": {
+  "baseline": {
+   "requests": 1.0,
+   "tool_calls": 0.0,
+   "prompt_tokens": 1865.0,
+   "uncached": 73.0,
+   "cached": 0.0,
+   "cache_write": 1792.0,
+   "completion_tokens": 2438.0,
+   "reasoning_tokens": 1936.0,
+   "cost_usd": 0.02811,
+   "seconds": 61.23,
+   "sandbox_seconds": 3.22
+  },
+  "repair": {
+   "requests": 2.0,
+   "tool_calls": 3.0,
+   "prompt_tokens": 11374.0,
+   "uncached": 194.0,
+   "cached": 4608.0,
+   "cache_write": 6572.0,
+   "completion_tokens": 226.0,
+   "reasoning_tokens": 28.0,
+   "cost_usd": 0.016714,
+   "seconds": 13.78
+  },
+  "edit": {
+   "requests": 3.0,
+   "tool_calls": 4.0,
+   "prompt_tokens": 23645.0,
+   "uncached": 289.0,
+   "cached": 20652.0,
+   "cache_write": 2704.0,
+   "completion_tokens": 791.0,
+   "reasoning_tokens": 53.0,
+   "cost_usd": 0.018026,
+   "seconds": 29.98,
+   "sandbox_seconds": 2.48
+  },
+  "total": {
+   "requests": 6.0,
+   "tool_calls": 7.0,
+   "prompt_tokens": 36884.0,
+   "uncached": 556.0,
+   "cached": 25260.0,
+   "cache_write": 11068.0,
+   "completion_tokens": 3455.0,
+   "reasoning_tokens": 2017.0,
+   "cost_usd": 0.06285,
+   "seconds": 104.99,
+   "sandbox_seconds": 5.7
+  }
+ },
+ "phases": {
+  "baseline": {
+   "candidate": "c0",
+   "seconds": 64.5
+  },
+  "repair": {
+   "final": "c0",
+   "stop": "submitted",
+   "repairs": 0,
+   "candidates": [],
+   "summary": "Verified the parametric L-bracket against all four reference views. The overall proportions, base holes, vertical slot, and plate thicknesses match, and the model is one valid solid with the required bounding-box placement.",
+   "seconds": 29.1
+  },
+  "edit": {
+   "final": "c1",
+   "stop": "submitted",
+   "repairs": 0,
+   "candidates": [
+    "c1"
+   ],
+   "summary": "Changed only slot_width from 6 mm to 9 mm. The slot remains 20 mm end-to-end at the same center, while the mounting holes, plate thickness, and 60 \u00d7 40 \u00d7 45 mm outer dimensions are unchanged.",
+   "seconds": 63.0
+  }
+ }
+}
