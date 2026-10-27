@@ -16,31 +16,51 @@ Kimi K3.1 Pro needs a top-up of at least $1 on the Kimi platform. At that tier t
 
 Tested on Linux x86_64 with Python 3.12.3 and Docker 29.9.2. CadQuery 2.8.0 needs Python 3.11 or newer.
 
-## Run it
+## Set up
 
 ```bash
 python -m venv .venv
 source .venv/bin/activate          # Windows: .venv\Scripts\Activate.ps1
 pip install -r requirements.txt
-cp .env.example .env               # then put your MOONSHOT_API_KEY in .env
+cp .env.example .env               # then put your MOONSHOT_API_KEY in .env (path B only)
+```
 
+## Reproduce the article's numbers
+
+There are two paths. Path A checks the recorded results without spending anything. Path B runs the experiment again and gives you new results.
+
+### Path A: re-score the recorded runs (no API key, no Docker)
+
+`runs/` holds the three runs from the article, with every program Kimi wrote, every STEP file it produced, and the usage record of every API request. `report.py` reads those files only. It sends no request to Kimi and runs no model code:
+
+```bash
+python report.py runs/20261026-214530
+python report.py runs/20261026-214846
+python report.py runs/20261026-215224
+```
+
+For each run it prints the 13 feature checks and the IoU of every candidate, the 8 edit checks, and tokens and cost per phase. It also rewrites that run's `results.json` and `figures/` with the same values. Two smaller checks:
+
+```bash
+python evaluator.py score runs/20261026-215224/candidates/c0/candidate.step   # one candidate (the 6.0 mm holes)
+python -m probes.evaluator_controls                                            # IoU on a plain L and a part scaled 1.2x
+```
+
+### Path B: run the full experiment again (API key, credit, Docker)
+
+You need a Kimi API key with at least $1 of top-up and a working Docker install.
+
+```bash
 python check_connection.py         # one request to confirm the key and model
 docker build -t cad-sandbox:2.8.0 sandbox/
-python build_reference.py          # hidden answer key plus the four input views
+python build_reference.py          # optional: rebuilds hidden/ and inputs/ from source
 python agent.py                    # baseline, repair loop, slot edit; saves runs/<timestamp>/
 python report.py runs/<timestamp>  # hidden scores, cost per phase, figures
 ```
 
+A run makes at least six requests and took about three minutes and 6.3 to 7.3 cents in the recorded trials. Kimi's output varies, so a new run gives its own numbers. `build_reference.py` is optional because the fixture is already committed. If you rerun it, compare the new files with `hidden/frozen_hashes.txt` (`sha256sum hidden/eval_rules.json hidden/manifest.json inputs/*.png`) to confirm you are scoring against the same fixture.
+
 `agent.py` uses `kimi-k3.1-pro` with `reasoning_effort="high"` on every request and keeps the full assistant message, including `reasoning_content` and `tool_calls`, in the history.
-
-## Without Docker
-
-You can still reproduce the scores and figures of the recorded runs, because they only read saved STEP files:
-
-```bash
-python report.py runs/20261026-214530
-python evaluator.py score runs/20261026-214530/candidates/c0/candidate.step
-```
 
 Setting `CAD_SANDBOX=subprocess` makes the runner execute candidates as a local Python process instead of a container. That is for debugging only: it gives model-written code the same access as your user account.
 
